@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Alice Yotsuba";
+  src: url("AliceYotsubaInc-Ea7Zj.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5fad1;
+  color: #43b032;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Alice Yotsuba";
+  padding-top: 10px;
+  gap: 10px;
+}
+
+hr {
+  border: 2px solid green;
+  width: 90%;
+  max-width: 45rem;
+  margin: 10px;
+}
+
+.profile-logo {
+  width: 12rem;
+  border-radius: 314px; /* to make it round */
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+.socials {
+  font-size: 32px;
+  color: inherit;
+}
+
+.socials a:hover {
+  color: #028b22;
+}
+
+.socials i:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1e8a1;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 5px;
+  width: 80%;
+  max-width: 40rem;
+  box-shadow: 5px 5px 0;
+  border: 2px solid #d1e8a1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-cards {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 40rem;
+  margin-bottom: 1rem;
+}
+
+.cards:hover {
+  border: 2px solid darkgreen;
+}
+
+.cards-logo {
+  padding: 10px;
+  font-size: 32px;
+}
+
+.cards-text {
+  font-size: 24px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-copy {
+  padding: 4px;
+  font-size: 32px;
+  background-color: #f5fad1;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#toast {
+  width: max-content;
+  position: fixed;
+  top: 0;
+}
+
+.toast-container {
+  background-color: white;
+  color: #0f0f25;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+  animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hilang {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
